@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_dir="/usr/local/bin/containers-monitor"
+install_dir="/usr/local/bin/shadowmysticcontainersmonitor"
 cd $install_dir
 
 # Obtém o nome da solução, a lista de containers e o timeout via script externo
@@ -79,13 +79,7 @@ log_execution_start() {
 # Função para verificar e subir containers
 check_and_start_containers() {
     for container_sufix in "${containers[@]}"; do
-        container=""
-        if [[ $container_sufix == jenkins* ]]; then
-            container="$container_sufix"
-        else
-            container="tibiaot-$container_sufix"
-        fi
-
+        container="$container_sufix"
         log_message "Verificando se o container $container existe..."
         # Verifica se o container já existe
         if [[ $(docker ps -a --filter "name=$container" --format '{{.Names}}') == "$container" ]]; then

@@ -21,9 +21,9 @@ throw_error_if_need "Erro ao criar o diretório de instalação: $install_dir"
 
 # Copia o script principal para o diretório de instalação
 echo "Copiando script de monitoramento para $install_dir..."
-sudo cp ./containers-monitor.sh $install_dir/containers-monitor.sh
+sudo cp ./shadowmysticcontainersmonitor.sh $install_dir/shadowmysticcontainersmonitor.sh
 throw_error_if_need "Erro ao copiar o script de monitoramento para $install_dir"
-sudo chmod +x $install_dir/containers-monitor.sh
+sudo chmod +x $install_dir/shadowmysticcontainersmonitor.sh
 throw_error_if_need "Erro ao definir permissões de execução para o script de monitoramento"
 
 # Copia arquivo .env para o diretório de instalação
