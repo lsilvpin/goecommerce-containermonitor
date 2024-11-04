@@ -1,0 +1,12 @@
+[Unit]
+Description=Container Monitoring Service for goecommercecontainersmonitor
+After=network.target
+
+[Service]
+EnvironmentFile=/usr/local/bin/goecommercecontainersmonitor/.env
+ExecStart=/usr/local/bin/goecommercecontainersmonitor/goecommercecontainersmonitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
