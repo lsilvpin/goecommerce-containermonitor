@@ -1,0 +1,12 @@
+[Unit]
+Description=Container Monitoring Service for containers-monitor
+After=network.target
+
+[Service]
+EnvironmentFile=/usr/local/bin/containers-monitor/.env
+ExecStart=/usr/local/bin/containers-monitor/containers-monitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
