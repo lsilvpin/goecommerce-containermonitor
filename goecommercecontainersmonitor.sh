@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_dir="/usr/local/bin/shadowmysticcontainersmonitor"
+install_dir="/usr/local/bin/goecommercecontainersmonitor"
 cd $install_dir
 
 # Obtém o nome da solução, a lista de containers e o timeout via script externo
